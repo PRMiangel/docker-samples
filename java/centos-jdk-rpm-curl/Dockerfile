@@ -3,7 +3,6 @@ FROM centos:centos6
 MAINTAINER PRMiangel
 
 RUN yum -y update
-RUN yum -y install wget
 
 RUN cd ~
 RUN curl -L -O -H "Cookie: oraclelicense=accept-securebackup-cookie" \
