@@ -1,0 +1,19 @@
+version: '3'
+services:
+  ubt1:
+    image: prmiangel/ubuntu-ping
+    container_name: node1
+    networks:
+      mynet123:
+        ipv4_address: 172.18.0.2
+  ubt2:
+    image: prmiangel/ubuntu-ping
+    container_name: node2
+    networks:
+      mynet123:
+        ipv4_address: 172.18.0.3
+networks:
+  mynet123:
+    ipam:
+      config:
+        - subnet: 172.18.0.0/16
